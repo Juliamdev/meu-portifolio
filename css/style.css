@@ -1,0 +1,33 @@
+/* Painéis de Vidro Desfocados (Glassmorphism) */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter:  blur(12px);
+    -webkit-backdrop-filter:  blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+/* Ajuste dos painéis de vidro para o Modo Escuro */
+.dark .glass-panel {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+}
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 163, 175, 0.5);
+}

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia Marques | Portifólio</title>
+    <!-- Google Fonts; Inter para interface tecnica e Fira Code Para terminal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para ícones premium -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+             theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            lightBg: '#ffffff',
+                            lightAlt: '#f8fafc',
+                            lightText: '#0f172a',
+                            lightBorder: '#e2e8f0',
+                            darkBg: '#020617',
+                            darkAlt: '#0f172a',
+                            darkText: '#f8fafc',
+                            darkBorder: '#334155',
+                            cobalt: '#1d4ed8',
+                            purpleGlow: '#a855f7',
+                            indigoGlow: '#6366f1'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-brand-lightBg text-brand-lightText dark:bg-brand-darkBg dark:text-brand-darkText font-sans antialiased transition-colors duration-500 overflow-x-hidden">
+    
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 w-full glass-panel transition-all duration-300 px-6 py-4 md:px-12 border-b">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-sky-400 dark:to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200">
+                JULIA FIALHO <span class="text-xs font-mono text-slate-400 dark:text-slate-500"></span>
+            </a>
+            
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex gap-6 text-sm font-medium">
+                    <a href="#sobre" class="hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Sobre</a>
+                    <a href="#tecnologias" class="hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Stack</a>
+                    <a href="#projetos" class="hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Projetos</a>
+                    <a href="#contato" class="hover:text-blue-600 dark:hover:text-purple-400 transition-colors">Contato</a>
+                </div>
+
+                <!-- Botão de Troca de Tema Dinâmico -->
+                <button id="themeToggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-900/50 hover:bg-slate-200 dark:hover:bg-slate-800 hover:scale-110 active:scale-95 transition-all duration-200" aria-label="Alternar Tema">
+                    <i id="themeIcon" class="fa-solid fa-sun text-purple-400"></i>
+                </button>
+            </div>
+        </div>    
+    </nav>
+    <main class="relative z-10 max-w-7xl mx-auto px-6 py-6 py-12 lg:px-12 space-y-32">
+        
+        <!-- Seção Hero -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 items-center pt-8">
+            <div class="lg:col-span-7 space-y-6 order-2 lg:order-1 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-600 dark:text-sky-300 text-xs font-mono">
+                    <span class="flex h-2.5 w-2.5 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
+                    </span>
+                    Disponível para novos desafios backend / pesquisa IA
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-none">
+                    Julia <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-sky-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">Fialho</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-600 dark:text-slate-350 max-w-xl font-light">
+                    Construindo arquiteturas resilientes com <strong class="font-medium text-slate-800 dark:text-white">C# / .NET</strong> e desbravando o mundo real com Visão Computacional em <strong class="font-medium text-slate-800 dark:text-white">Python & YOLOv8</strong>.
+                </p>
+
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                    <a href="https://linkedin.com/julia-marques-fialho" target="_blank" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-lg shadow-blue-600/20 dark:shadow-blue-500/10 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+                        <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/juliamdev" target="_blank" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-200">
+                        <i class="fa-brands fa-github mr-2"></i> GitHub
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- Imagem de Perfil -->
+             <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center">
+                <div class="relative group">
+                    <!-- Brilho ao redor da foto para dar efeito tecnológico e robusto -->
+                    <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 opacity-40 group-hover:opacity-80 blur transition duration-500"></div>
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-slate-950 bg-slate-900">
+                        <img 
+                            src="assets/Perfil-Julia.jpeg"
+                            alt="Julia Fialho" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/400x400/0f172a/ffffff?text=JF'"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="space-y-8 scroll-mt-24">
+            <div class="flex flex-col items-center text-center space-y-3">
+                <h2 class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-purple-400 font-bold">Resumo Profissional</h2>
+                <h3 class="text-3xl font-bold tracking-tight">Arquitetura de Software & Inteligência Artificial</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-7 glass-panel p-8 rounded-3xl space-y-6">
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg font-light">
+                        Sou graduanda em <span class="font-semibold text-slate-800 dark:text-white">Sistemas de Informação pela PUC Minas</span>. Minha jornada une a precisão cirúrgica de sistemas backend robustos com a pesquisa aplicada no domínio de Inteligência Artificial.
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg font-light">
+                        Atuo projetando arquiteturas utilizando <span class="font-semibold text-slate-800 dark:text-white">C# / .NET Core</span> para orquestrar dados eficientemente, além de implementar redes neurais convolucionais focadas em visão computacional (<span class="font-semibold text-slate-800 dark:text-white">YOLO, OpenCV, PyTorch</span>) voltadas para o ambiente corporativo e médico.
+                    </p>
+                </div>
+                
+                <!-- Bento Box de Fatos Rápidos -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4 w-full">
+                    
+                    <div class="glass-panel p-6 rounded-2xl text-center space-y-2 hover:-translate-y-1 transition-transform duration-300">
+                        <span class="text-3xl font-extrabold text-purple-600 dark:text-purple-400">100%</span>
+                        <p class="text-sm font-semibold">Código Limpo</p>
+                        <p class="text-xs text-slate-400">SOLID, Clean Architecture</p>
+                    </div>
+                    <div class="glass-panel p-6 rounded-2xl text-center space-y-2 hover:-translate-y-1 transition-transform duration-300">
+                        <span class="text-3xl font-extrabold text-pink-500">24/7</span>
+                        <p class="text-sm font-semibold">Inovação</p>
+                        <p class="text-xs text-slate-400">Evolução Contínua</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Tecnologias  -->
+        <section id="tecnologias" class="space-y-8 scroll-mt-24">
+            <div class="flex flex-col items-center text-center space-y-3">
+                <h2 class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-purple-400 font-bold">Tecnologias</h2>
+                <h3 class="text-3xl font-bold tracking-tight">O meu Ecossistema Técnico</h3>
+            </div>
+
+            <!-- Bento-style stack details -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Stack Backend -->
+                <div class="glass-panel p-6 rounded-2xl space-y-4 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">Backend Development</h4>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">C#, ASP.NET Core, APIs RESTful, Entity Framework Core e injeção de dependências.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-2 py-1 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">C# / .NET</span>
+                        <span class="px-2 py-1 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">ASP.NET</span>
+                    </div>
+                </div>
+
+                <!-- Stack Computer Vision -->
+                <div class="glass-panel p-6 rounded-2xl space-y-4 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/5 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">Computer Vision</h4>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Visão Computacional aplicada com YOLOv8 para rastreamento de alta velocidade, PyTorch e OpenCV.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-2 py-1 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Python</span>
+                        <span class="px-2 py-1 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">YOLOv8</span>
+                    </div>
+                </div>
+
+                <!-- Stack Data -->
+                <div class="glass-panel p-6 rounded-2xl space-y-4 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/5 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-500 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">Persistência & Dados</h4>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Modelagem relacional inteligente, performance em consultas pesadas SQL Server e arquitetura ORM.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-2 py-1 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">SQL Server</span>
+                        <span class="px-2 py-1 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">EF Core</span>
+                    </div>
+                </div>
+
+                <!-- Stack DevOps/Git -->
+                <div class="glass-panel p-6 rounded-2xl space-y-4 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/5 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-xl">
+                        <i class="fa-brands fa-git-alt"></i>
+                    </div>
+                    <h4 class="text-lg font-bold">DevOps & Cloud</h4>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Controle de versão robusto no Git, fluxos de CI/CD para deploy seguro de microsserviços na Vercel e Azure.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-2 py-1 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Git / GitHub</span>
+                        <span class="px-2 py-1 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Projetos: Grid Duplo e Ultra Profissional -->
+        <section id="projetos" class="space-y-12 scroll-mt-24">
+            <div class="flex flex-col items-center text-center space-y-3">
+                <h2 class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-purple-400 font-bold">Portfólio</h2>
+                <h3 class="text-3xl font-bold tracking-tight">Sistemas em Destaque</h3>
+                <p class="text-slate-500 dark:text-slate-400 text-sm max-w-xl">
+                    Hospedados em ambiente de alta disponibilidade para acesso imediato e validação arquitetural.
+                </p>
+            </div>
+
+            <!-- Grade de Projetos - **Duas Colunas  -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Card Projeto 1: YOLO Hospitalar -->
+                <div class="glass-panel rounded-3xl overflow-hidden group flex flex-col hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/5 transition-all duration-300">
+                    <!-- Preview Imagem de Alta Qualidade -->
+                    <div class="relative h-40 overflow-hidden bg-slate-900 flex items-center justify-center">
+                        <img 
+                            src="http://googleusercontent.com/image_collection/image_retrieval/3149238936441184167_0" 
+                            alt="YOLOv8 Hospitalar" 
+                            class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/600x400/1e1b4b/a855f7?text=YOLO+Hospitalar'"
+                        >
+                        <!-- Badge flutuante de status -->
+                        <span class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold rounded-full bg-purple-600/90 text-white shadow-md">Computer Vision</span>
+                    </div>
+
+                    <!-- Informações do Projeto -->
+                    <div class="p-8 space-y-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-mono text-purple-500 font-semibold uppercase">YOLOv8 & PyTorch</span>
+                            </div>
+                            <h4 class="text-2xl font-bold group-hover:text-purple-400 transition-colors">YOLOv8 Instrumentos Cirúrgicos</h4>
+                            <p class="text-slate-500 dark:text-slate-350 text-sm font-light leading-relaxed">
+                                Plataforma de visão computacional de ponta para ambientes médicos. Analisa fluxos de vídeo em tempo real para rastrear, contar e catalogar instrumentos no pré e pós operatório, mitigando em até 99.4% o risco de esquecimento acidental.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6 pt-4">
+                            <!-- Tech tags de alta precisão -->
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 text-xs rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-mono">Python</span>
+                                <span class="px-2.5 py-1 text-xs rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-mono">YOLOv8</span>
+                                <span class="px-2.5 py-1 text-xs rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-mono">OpenCV</span>
+                            </div>
+
+                            <!-- Botões de Ação com excelente feedback no toque e clique -->
+                            <!-- <div class="flex items-center gap-4">
+                                <a href="https://github.com" target="_blank" class="flex-1 py-3 px-4 rounded-xl text-center border border-slate-300 dark:border-slate-800 bg-white/40 dark:bg-slate-900/40 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-semibold transition duration-200">
+                                    <i class="fa-brands fa-github mr-1.5"></i> Código-Fonte
+                                </a>
+                                <a href="https://vercel.com" target="_blank" class="flex-1 py-3 px-4 rounded-xl text-center bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold shadow-lg shadow-purple-600/10 transition duration-200">
+                                    Acessar Demo <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-xs"></i>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Projeto 2: VisionFinance -->
+                <div class="glass-panel rounded-3xl overflow-hidden group flex flex-col hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-300">
+                    <!-- Preview Imagem de Alta Qualidade -->
+                    <div class="relative h-40 overflow-hidden bg-slate-900 flex items-center justify-center">
+                        <img 
+                            src="http://googleusercontent.com/image_collection/image_retrieval/7591142742991760276_0" 
+                            alt="VisionFinance API" 
+                            class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/600x400/0c4a6e/38bdf8?text=VisionFinance'"
+                        >
+                        <!-- Badge flutuante de status -->
+                        <span class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold rounded-full bg-blue-600/90 text-white shadow-md">Backend Architecture</span>
+                    </div>
+
+                    <!-- Informações do Projeto -->
+                    <div class="p-8 space-y-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-mono text-blue-500 font-semibold uppercase">ASP.NET Core & SQL Server</span>
+                            </div>
+                            <h4 class="text-2xl font-bold group-hover:text-blue-400 transition-colors">VisionFinance Hub</h4>
+                            <p class="text-slate-500 dark:text-slate-350 text-sm font-light leading-relaxed">
+                                Solução arquitetural corporativa para contabilidade e relatórios automatizados de investimentos. Construída sob os princípios da Arquitetura Limpa (Clean Architecture), o ecossistema processa fluxos complexos em milissegundos.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6 pt-4">
+                            <!-- Tech tags de alta precisão -->
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 text-xs rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-mono">C# / .NET 8</span>
+                                <span class="px-2.5 py-1 text-xs rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-mono">SQL Server</span>
+                                <span class="px-2.5 py-1 text-xs rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-mono">EF Core</span>
+                            </div>
+
+                            <!-- Botões de Ação com excelente feedback no toque e clique -->
+                            <div class="flex items-center gap-4">
+                                <a href="https://github.com/Juliamdev/VisionFinance" target="_blank" class="flex-1 py-3 px-4 rounded-xl text-center border border-slate-300 dark:border-slate-800 bg-white/40 dark:bg-slate-900/40 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-semibold transition duration-200">
+                                    <i class="fa-brands fa-github mr-1.5"></i> Código-Fonte
+                                </a>
+                                <!-- <a href="https://vercel.com" target="_blank" class="flex-1 py-3 px-4 rounded-xl text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold shadow-lg shadow-blue-600/10 transition duration-200">
+                                    Acessar Demo <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-xs"></i>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+    
+    </main>
+   <!-- Secção Conexão / Contacto -->
+        <section id="contato" class="scroll-mt-24 max-w-4xl mx-auto">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 space-y-8">
+                <!-- Efeito de iluminação de fundo -->
+                <div class="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-purple-500/10 dark:bg-purple-500/20 blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-24 -left-24 w-48 h-48 rounded-full bg-blue-500/10 dark:bg-blue-500/20 blur-3xl pointer-events-none"></div>
+
+                <div class="text-center space-y-3 relative z-10">
+                    <h3 class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-purple-400 font-bold">Interação Direta</h3>
+                    <h4 class="text-3xl font-bold tracking-tight">Iniciar Conversa</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm max-w-md mx-auto">
+                        Seja para discutir arquiteturas de microsserviços, oportunidades de estágio ou novos horizontes de IA.
+                    </p>
+                </div>
+
+                <!-- Formulário com Atributos Name e Id Vinculados ao Web3Forms -->
+                <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleContactSubmit(event)" class="space-y-6 max-w-2xl mx-auto relative z-10">
+                    
+                    <!-- [AQUI ESTÁ A CHAVE DE ACESSO] Guardada de forma centralizada e limpa -->
+                    <input type="hidden" name="access_key" id="web3formsKey" value="e91a9435-1539-4105-9dcc-c7f9bc194e48">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label class="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400">Nome ou Empresa</label>
+                            <input type="text" name="name" id="contactName" required placeholder="Escreva o seu nome..." class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:focus:ring-purple-400 dark:focus:border-purple-400 outline-none text-sm transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400">E-mail</label>
+                            <input type="email" name="email" id="contactEmail" required placeholder="parceiro@empresa.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:focus:ring-purple-400 dark:focus:border-purple-400 outline-none text-sm transition-all">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400">A sua Mensagem</label>
+                        <textarea name="message" id="contactMessage" required rows="4" placeholder="O que gostaria de construir em conjunto?" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 dark:focus:ring-purple-400 dark:focus:border-purple-400 outline-none text-sm transition-all"></textarea>
+                    </div>
+
+                    <!-- Botão de feedback interativo -->
+                    <div class="flex items-center justify-between flex-wrap gap-4 pt-2">
+                        
+                        <button type="submit" id="submitBtn" class="px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-purple-600 dark:to-indigo-600 hover:from-blue-700 hover:to-indigo-700 dark:hover:from-purple-700 dark:hover:to-indigo-700 text-white font-semibold rounded-xl text-sm transition duration-200 shadow-md">
+                            Enviar Mensagem <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Feedback Visual Otimizado (Não intrusivo) -->
+                <div id="formFeedback" class="hidden max-w-2xl mx-auto p-4 rounded-xl text-center font-semibold text-sm transition duration-300"></div>
+            </div>
+        </section>
+
+    <!-- Footer Premium -->
+    <footer class="border-t border-slate-200 dark:border-slate-900 py-12 mt-20 relative z-10 bg-slate-50/50 dark:bg-slate-950/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-sm text-slate-400">&copy; 2026 Julia Fialho. Todos os direitos reservados.</p>
+            <div class="flex items-center gap-6 text-slate-400 text-sm">
+                <a href="https://github.com/Juliamdev" target="_blank" class="hover:text-blue-500 dark:hover:text-purple-400 transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="https://linkedin.com/in/julia-marques-fialho" target="_blank" class="hover:text-blue-500 dark:hover:text-purple-400 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                <span class="font-mono text-xs">made_with_code_and_coffee.py</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-slate-500">
+                    <i class="fa-solid fa-envelope text-blue-500 dark:text-purple-400"></i>
+                    <span class="font-mono text-xs select-all">juliamarquesfialho@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Importação do Script de Logica Separado -->
+    <script src="js/main.js" defer></script>
+
+</body>
+</html>
