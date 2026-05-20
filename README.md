@@ -2,7 +2,7 @@
 
 Welcome to the official repository of my personal portfolio. This interactive platform showcases my academic journey at PUC Minas, my research in Applied Artificial Intelligence, and my expertise in building high-performance backend systems.
 
-🔗 Live Demo: [portfolio-jessicamf4.vercel.app](https://meu-portifolio-five-jade.vercel.app/)
+🔗 Live Demo: [https://meu-portifolio-five-jade.vercel.app/](https://meu-portifolio-five-jade.vercel.app/)
 
 ✨ Features & Highlights
 
